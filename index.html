@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sapho Luxe — skincare, fragrance and beauty essentials. Order directly on WhatsApp.">
+  <title>Sapho Luxe | Beauty & Skincare</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="brand" href="#home" aria-label="Sapho Luxe home">
+        <span class="brand-mark">S</span>
+        <span>
+          <strong>SAPHO LUXE</strong>
+          <small>BEAUTY • SKINCARE • FRAGRANCE</small>
+        </span>
+      </a>
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#shop">Shop</a>
+        <a href="#about">About</a>
+        <button class="cart-btn" onclick="openCart()">Cart <span id="cartCount">0</span></button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <p class="eyebrow">WELCOME TO SAPHO LUXE</p>
+        <h1>Everyday beauty,<br><em>made luxurious.</em></h1>
+        <p class="hero-text">Discover carefully selected beauty and body-care essentials. Shop your favourites and order directly through WhatsApp.</p>
+        <a class="primary-btn" href="#shop">Shop Collection <span>→</span></a>
+      </div>
+      <div class="hero-glow"></div>
+    </section>
+
+    <section id="shop" class="shop-section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">THE COLLECTION</p>
+          <h2>Beauty essentials</h2>
+        </div>
+        <p class="section-note">Simple shopping. Personal service. WhatsApp ordering.</p>
+      </div>
+
+      <div id="products" class="product-grid"></div>
+    </section>
+
+    <section id="about" class="about-section">
+      <div>
+        <p class="eyebrow">ABOUT SAPHO LUXE</p>
+        <h2>Luxury that feels personal.</h2>
+      </div>
+      <p>Sapho Luxe brings beauty and body-care products closer to you, with an easy way to browse, choose and order. Every order is confirmed personally on WhatsApp.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-brand">SAPHO LUXE</div>
+    <p>Beauty • Skincare • Fragrance</p>
+    <a href="https://wa.me/27630738143" target="_blank" rel="noopener">WhatsApp: 063 073 8143</a>
+    <p class="copyright">© 2026 Sapho Luxe. All rights reserved.</p>
+  </footer>
+
+  <div id="cartOverlay" class="overlay" onclick="closeCart(event)">
+    <aside class="cart-panel" onclick="event.stopPropagation()">
+      <div class="cart-head">
+        <h2>Your Cart</h2>
+        <button onclick="closeCart()" aria-label="Close cart">×</button>
+      </div>
+      <div id="cartItems"></div>
+      <div id="cartEmpty" class="empty-cart">Your cart is empty.</div>
+
+      <div id="checkout" class="checkout hidden">
+        <div class="total-row"><span>Total</span><strong id="cartTotal">R0</strong></div>
+        <label>Full name<input id="customerName" type="text" placeholder="Your name"></label>
+        <label>WhatsApp number<input id="customerPhone" type="tel" placeholder="e.g. 063 123 4567"></label>
+        <label>Delivery address<textarea id="customerAddress" placeholder="Your delivery address"></textarea></label>
+        <label>Order note <span class="optional">(optional)</span><textarea id="customerNote" placeholder="Any special request?"></textarea></label>
+        <button class="whatsapp-btn" onclick="sendWhatsApp()">ORDER ON WHATSAPP <span>↗</span></button>
+        <p class="secure-note">Your order will open in WhatsApp for confirmation.</p>
+      </div>
+    </aside>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
