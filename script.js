@@ -4,7 +4,7 @@ const products = [
     name: "NUKA Modern Me Hair & Body Perfume Mist",
     category: "Hair & Body",
     price: 90,
-    image: "images/nuka-mist.jpg",
+    image: "nuka-mist.jpg",
     description: "A refreshing hair and body perfume mist for everyday fragrance."
   },
   {
@@ -12,7 +12,7 @@ const products = [
     name: "NUKA Luxury Lotion",
     category: "Body Care",
     price: 350,
-    image: "images/nuka-luxury-lotion.jpg",
+    image: "nuka-luxury-lotion.jpg",
     description: "A luxurious body lotion for a smooth, beautifully scented routine."
   }
 ];
