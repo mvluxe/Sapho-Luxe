@@ -4,7 +4,7 @@ const products = [
     name: "Lasss Natural Turmeric Soap",
     category: "Body Care",
     price: 110,
-    image: "images/turmeric-soap.jpg",
+    image: "turmeric-soap.jpg",
     description: "Natural turmeric soap for an everyday body-care routine. 140g."
   },
   {
@@ -12,7 +12,7 @@ const products = [
     name: "Lasss Brightening Serum",
     category: "Skincare",
     price: 155,
-    image: "images/brightening-serum.jpg",
+    image: "brightening-serum.jpg",
     description: "Brightening serum for an everyday skincare routine. 30ml."
   },
   {
@@ -20,7 +20,7 @@ const products = [
     name: "Lasss Turmeric & Honey Mask",
     category: "Face Care",
     price: 162,
-    image: "images/turmeric-honey-mask.jpg",
+    image: "turmeric-honey-mask.jpg",
     description: "Turmeric and honey face mask for your skincare routine."
   },
   {
@@ -28,7 +28,7 @@ const products = [
     name: "Lasss Roll On Anti-Perspirant",
     category: "Personal Care",
     price: 97,
-    image: "images/roll-on.jpg",
+    image: "roll-on.jpg",
     description: "Roll-on anti-perspirant for everyday personal care. 50ml."
   },
   {
@@ -36,7 +36,7 @@ const products = [
     name: "Lasss Pomegranate Body Butter",
     category: "Body Care",
     price: 130,
-    image: "images/pomegranate-body-butter.jpg",
+    image: "pomegranate-body-butter.jpg",
     description: "Pomegranate body butter for everyday body-care and moisturising. 150ml."
   },
   {
@@ -44,7 +44,7 @@ const products = [
     name: "Lasss Anti-Blemish Moisturising Face Cream",
     category: "Face Care",
     price: 96,
-    image: "images/anti-blemish-face-cream.jpg",
+    image: "anti-blemish-face-cream.jpg",
     description: "Moisturising face cream for an everyday skincare routine."
   },
   {
@@ -52,7 +52,7 @@ const products = [
     name: "Lasss Tissue Oil",
     category: "Body Care",
     price: 120,
-    image: "images/tissue-oil.jpg",
+    image: "tissue-oil.jpg",
     description: "Tissue oil for everyday body-care and moisturising. 150ml."
   },
   {
@@ -60,7 +60,7 @@ const products = [
     name: "Lasss Turmeric Exfoliating Face Scrub",
     category: "Face Care",
     price: 162,
-    image: "images/turmeric-face-scrub.jpg",
+    image: "turmeric-face-scrub.jpg",
     description: "Turmeric exfoliating face scrub for an everyday skincare routine. 150ml."
   },
   {
@@ -68,7 +68,7 @@ const products = [
     name: "Lasss Brightening Exfoliating Face Wash — Lemon",
     category: "Face Care",
     price: 130,
-    image: "images/lemon-face-wash.jpg",
+    image: "lemon-face-wash.jpg",
     description: "Lemon brightening exfoliating face wash for an everyday cleansing routine. 150ml."
   },
   {
@@ -76,7 +76,7 @@ const products = [
     name: "Lasss Turmeric Skin Detox Tea",
     category: "Wellness",
     price: 195,
-    image: "images/turmeric-skin-detox-tea.jpg",
+    image: "turmeric-skin-detox-tea.jpg",
     description: "Turmeric & chai mix with rooibos extract. 20 tea bags."
   }
 ];
