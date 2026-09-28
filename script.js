@@ -1,19 +1,83 @@
 const products = [
   {
-    id: "nuka-mist",
-    name: "NUKA Modern Me Hair & Body Perfume Mist",
-    category: "Hair & Body",
-    price: 90,
-    image: "nuka-mist.jpg",
-    description: "A refreshing hair and body perfume mist for everyday fragrance."
+    id: "turmeric-soap",
+    name: "Lasss Natural Turmeric Soap",
+    category: "Body Care",
+    price: 110,
+    image: "images/turmeric-soap.jpg",
+    description: "Natural turmeric soap for an everyday body-care routine. 140g."
   },
   {
-    id: "nuka-lotion",
-    name: "NUKA Luxury Lotion",
+    id: "brightening-serum",
+    name: "Lasss Brightening Serum",
+    category: "Skincare",
+    price: 155,
+    image: "images/brightening-serum.jpg",
+    description: "Brightening serum for an everyday skincare routine. 30ml."
+  },
+  {
+    id: "turmeric-honey-mask",
+    name: "Lasss Turmeric & Honey Mask",
+    category: "Face Care",
+    price: 162,
+    image: "images/turmeric-honey-mask.jpg",
+    description: "Turmeric and honey face mask for your skincare routine."
+  },
+  {
+    id: "roll-on",
+    name: "Lasss Roll On Anti-Perspirant",
+    category: "Personal Care",
+    price: 97,
+    image: "images/roll-on.jpg",
+    description: "Roll-on anti-perspirant for everyday personal care. 50ml."
+  },
+  {
+    id: "pomegranate-body-butter",
+    name: "Lasss Pomegranate Body Butter",
     category: "Body Care",
-    price: 350,
-    image: "nuka-luxury-lotion.jpg",
-    description: "A luxurious body lotion for a smooth, beautifully scented routine."
+    price: 130,
+    image: "images/pomegranate-body-butter.jpg",
+    description: "Pomegranate body butter for everyday body-care and moisturising. 150ml."
+  },
+  {
+    id: "anti-blemish-face-cream",
+    name: "Lasss Anti-Blemish Moisturising Face Cream",
+    category: "Face Care",
+    price: 96,
+    image: "images/anti-blemish-face-cream.jpg",
+    description: "Moisturising face cream for an everyday skincare routine."
+  },
+  {
+    id: "tissue-oil",
+    name: "Lasss Tissue Oil",
+    category: "Body Care",
+    price: 120,
+    image: "images/tissue-oil.jpg",
+    description: "Tissue oil for everyday body-care and moisturising. 150ml."
+  },
+  {
+    id: "turmeric-face-scrub",
+    name: "Lasss Turmeric Exfoliating Face Scrub",
+    category: "Face Care",
+    price: 162,
+    image: "images/turmeric-face-scrub.jpg",
+    description: "Turmeric exfoliating face scrub for an everyday skincare routine. 150ml."
+  },
+  {
+    id: "lemon-face-wash",
+    name: "Lasss Brightening Exfoliating Face Wash — Lemon",
+    category: "Face Care",
+    price: 130,
+    image: "images/lemon-face-wash.jpg",
+    description: "Lemon brightening exfoliating face wash for an everyday cleansing routine. 150ml."
+  },
+  {
+    id: "turmeric-skin-detox-tea",
+    name: "Lasss Turmeric Skin Detox Tea",
+    category: "Wellness",
+    price: 195,
+    image: "images/turmeric-skin-detox-tea.jpg",
+    description: "Turmeric & chai mix with rooibos extract. 20 tea bags."
   }
 ];
 
@@ -89,6 +153,7 @@ function renderCart() {
   let total = 0;
   itemsBox.innerHTML = cart.map(item => {
     const p = products.find(x => x.id === item.id);
+    if (!p) return "";
     const line = p.price * item.qty;
     total += line;
     return `
@@ -140,9 +205,10 @@ function sendWhatsApp() {
   let total = 0;
   const lines = cart.map(item => {
     const p = products.find(x => x.id === item.id);
+    if (!p) return "";
     total += p.price * item.qty;
     return `• ${p.name} × ${item.qty} — ${money(p.price * item.qty)}`;
-  });
+  }).filter(Boolean);
 
   const message = [
     "Hello Sapho Luxe 👋🏽",
